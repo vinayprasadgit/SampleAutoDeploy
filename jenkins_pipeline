@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('git checkout') {
             steps {
-                git 'checkout feature1'
+               git branch: 'feature1', url: 'https://github.com/vinayprasadgit/SampleAutoDeploy.git'
             }
         }
     }
