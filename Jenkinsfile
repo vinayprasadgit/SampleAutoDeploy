@@ -9,10 +9,5 @@ pipeline {
                git branch: 'feature1', url: 'https://github.com/vinayprasadgit/SampleAutoDeploy.git'
             }
         }
-        stage('Build Code') {
-            steps {
-                sh "mvn clean install"
-            }
-        }
     }
 }
