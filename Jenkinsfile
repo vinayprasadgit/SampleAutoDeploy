@@ -5,13 +5,13 @@ pipeline {
     }
     stages {
         stage('Test') {
+            when {
+                expression {
+                    BRANCH_NAME =='feature1'
+                }
             steps {
                 sh "mvn clean test"
-            }
-        }
-        stage('git checkout') {
-            steps {
-               git branch: 'feature2', url: 'https://github.com/vinayprasadgit/SampleAutoDeploy.git'
+                echo "Testing Completed for ${BRANCH_NAME}"
             }
         }
     }
