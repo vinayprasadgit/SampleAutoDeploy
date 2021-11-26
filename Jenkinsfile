@@ -7,7 +7,7 @@ pipeline {
         stage('Test') {
             when {
                 expression {
-                    BRANCH_NAME =='feature1'
+                    BRANCH_NAME =='feature3'
                 }
             }
             steps {
