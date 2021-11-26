@@ -9,6 +9,7 @@ pipeline {
                 expression {
                     BRANCH_NAME =='feature1'
                 }
+            }
             steps {
                 sh "mvn clean test"
                 echo "Testing Completed for ${BRANCH_NAME}"
