@@ -9,9 +9,9 @@ pipeline {
                sh 'mvn test'
             }
         }
-        stage('Build Code') {
+        stage('git checkout') {
             steps {
-                sh "mvn clean install"
+               git branch: 'master', url: 'https://github.com/vinayprasadgit/SampleAutoDeploy.git'
             }
         }
     }
