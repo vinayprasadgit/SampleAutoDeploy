@@ -4,9 +4,14 @@ pipeline {
         PATH="/opt/maven/bin:$PATH"
     }
     stages {
-        stage('git checkout') {
+        stage('Test') {
             steps {
-               git branch: 'feature1', url: 'https://github.com/vinayprasadgit/SampleAutoDeploy.git'
+               sh 'mvn test'
+            }
+        }
+        stage('Build Code') {
+            steps {
+                sh "mvn clean install"
             }
         }
     }
