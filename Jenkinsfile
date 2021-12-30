@@ -11,7 +11,7 @@ pipeline {
         }
         stage('git checkout') {
             steps {
-               git branch: 'master', url: 'https://github.com/vinayprasadgit/SampleAutoDeploy.git'
+               git branch: 'feature3', url: 'https://github.com/vinayprasadgit/SampleAutoDeploy.git'
             }
         }
     }
